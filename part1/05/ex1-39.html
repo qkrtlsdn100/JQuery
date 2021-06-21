@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 외부에 있는 함수 호출</title>
+</head>
+<body>
+    <script>
+        function calculation(m){
+            m = m * 0.3025;
+            return m;
+        }
+        function areaChange(mv){
+            var result = calculation(mv).toFixed(1);
+            document.write(result + "평");
+        }
+        areaChange(102);
+    </script>
+</body>
+</html>
