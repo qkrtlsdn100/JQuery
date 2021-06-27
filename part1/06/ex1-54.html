@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체</title>
+</head>
+<body>
+    <script>
+        		
+		var ary = ["a","b","c","d","e"];
+		document.write(ary.length + "<br>");
+		document.write(ary.slice(2) + "<br>");
+		document.write(ary.slice(1,3) + "<br>");       		
+		document.write(ary.join("/") + "<br>");
+		document.write(ary.splice(1,3, "x","y","z")  + "<br>");
+		document.write(ary + "<br>");
+		document.write(ary.pop() + "<br>");
+		document.write(ary + "<br>");
+		document.write(ary.push("f") + "<br>");
+		document.write(ary + "<br>");
+		document.write(ary.shift() + "<br>");
+		document.write(ary + "<br>");
+		document.write(ary.unshift("g") + "<br>");
+		document.write(ary + "<br>");
+		document.write(ary.reverse() + "<br>");
+		document.write(ary + "<br>");
+		var addAry = ["javascript","jQuery"];
+		var newAry = ary.concat(addAry);
+		document.write(newAry + "<br>");		
+		document.write(newAry.toString() + "<br>");
+		var aryNum = [2, 41, 11];
+		aryNum.sort(function(a, b){
+			return a -b;
+		});
+		document.write(aryNum);
+    
+    </script>
+</body>
+</html>
