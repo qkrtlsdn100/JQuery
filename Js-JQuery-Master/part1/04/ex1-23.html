@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문안의 if</title>
+</head>
+<body>
+    <script>
+        var gender = prompt("'남성'또는'여성'을 입력해주세요 : ", "");
+        var age = prompt("나이를 입력해주세요 : ", "")
+        var comment = "";
+
+        if(gender == "남성"){
+            if(age < 20){
+                comment = "Man1 제품을 추천합니다"
+            }else if(age >= 20){
+                comment = "Man2 제품을 추천합니다"
+            }else{
+                comment = "나이를 잘못 입력하셨습니다"
+            }
+        }else if(gender == "여성"){
+            if(age < 20){
+                comment = "Woman1 제품을 추천합니다"
+            }else if(age >= 20){
+                comment = "Woman2 제품을 추천합니다"
+            }else{
+                comment = "나이를 잘못 입력하셨습니다"
+            }
+        }else{
+            comment = "'성별'을 잘못 입력하셨습니다"
+        }
+        document.write(comment);
+    </script>
+</body>
+</html>
