@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+</head>
+<body>
+    <script>
+        
+		var str = "Java_script";		
+		document.write(str.length + "<br>");
+		document.write(str.charAt(0) + "<br>");
+		document.write(str.charCodeAt(0) + "<br>");
+		document.write(String.fromCharCode(51088,48148,49828,53356,47549,53944) + "<br>");
+		document.write(str.toLowerCase() + "<br>");
+		document.write(str.toUpperCase() + "<br>");
+		document.write(str.indexOf("a") + "<br>");
+		document.write(str.lastIndexOf("a") + "<br>");
+		document.write(str.slice(5,11) + "<br>");
+		document.write(str.substring(5,11) + "<br>");
+		document.write(str.substr(5,6) + "<br>");
+		document.write(str.split("_")[0] + "<br>");
+		document.write(str.split("_")[1] + "<br>");
+		document.write(str.replace("Java_script","jQuery") + "<br>");
+		 
+		var str1 = "java";
+		var str2 = "script";
+		document.write(str1.concat(str2) + "<br>");		
+		document.write(str.anchor("javascript") + "<br>");
+		document.write(str.bold() + "<br>");
+		document.write(str.link("http://icoxpublish.com") + "<br>");
+		document.write(str.sub() + "<br>");
+		document.write(str.sup());		
+    
+
+		// String 객체 속성 설명
+		// length : 문자열의 길이(개수)를 취득함
+
+
+		// String 객체 메소드 설명
+		// charAt() : charAt(n)일 때 문자열에서 n값과 같은 index 위치의 문자를 반환
+		// charCodeAt() : charCodeAt(n)일 때 문자
+		// fromCharCode() : fromCharCode(n1, n2)일 때 n1, n2등 유니코드값으로 주면 문자로 반환
+		// toLowerCase() : 소문자로 변경
+		// toUpperCase() : 대문자로 변경
+		// indexOf() : indexOf("a")일 때 "a" 문자와 일치하는 문자를 왼쪽 문자열부터 검색해서 index값으로 반환
+		// lastindexOf() : lastindexOf("a")일 때 "a" 문자와 일치하는 문자를 오른쪽 문자열부터 검색하여 index값으로 반환
+		// slice() : slice(n1, n2)일 때 n1값과 같은 index 위치에서 시작하여 문자열 번호 n2까지 추출
+		// subString() : subString(n1, n2)일 때 n1값은 같은 index 위치에서 시작하여 문자열 번호 n2까지 추출
+		// subStr() : subStr(n1, n2)일 때 n1값과 같은 index 위치를 포함한 n2개의 문자를 추출
+		// split() : split("_")일 때 "_" 문자를 기준으로 문자열을 분할하여 배열로 만들어 줌
+		// replace() : replace("a", "b")일 때 "a"을 "b"로 변경
+		// concat() : 두 개의 문자를 하나의 문자로 만들어 줌 
+    </script>
+</body>
+</html>

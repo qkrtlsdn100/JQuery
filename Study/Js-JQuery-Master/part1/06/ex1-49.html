@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <script>
+        var circle = new Object();
+        circle.color = "red";
+        circle.diameter = 100;
+        circle.radius = function(){
+            var n = this.diameter / 2;
+            return n;
+        }
+        document.write(circle.color + "/" + circle.diameter + "/" + circle.radius() + "<br>")
+        circle.color = "blue";
+        circle.diameter = 200;
+        document.write(circle.color + "/" + circle.diameter + "/" + circle.radius() + "<br>")
+    </script>
+</body>
+</html>
