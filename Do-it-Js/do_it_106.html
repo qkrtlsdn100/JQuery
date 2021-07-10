@@ -1,0 +1,68 @@
+/*
+charAt(index) : 문자열에서 인덱스 번호에 해당하는 문자를 반환
+
+indexOf("찾을 문자") : 문자열에서 왼쪽부터 찾아 제일 먼저 일치하는 문자의 인덱스 번호를 반환
+                      만일 찾는 문자가 없으면 -1을 반환
+
+lastInedxOf("찾을 문자") : 문자열에서 오른쪽부터 찾아 제일 먼저 일치하는 문자의 인덱스 번호를 반환
+                          만일 찾는 문자가 없으면 -1을 반환
+                          
+match("찾을 문자") : 문자열에서 왼쪽부터 찾아 제일 먼저 찾은 문자를 반환
+                    만일 찾는 문자가 없으면 null을 반환
+                 
+search("찾을 문자") : 문자열에서 왼쪽부터 문자를 찾아 제일 먼저 일치하는 인덱스 번호를 반환
+
+substr(a, 문자 개수) : 문자열에 a 인덱스부터 지정한 문자 개수만큼 문자열 반환
+
+substring(a,b) : a 인덱스부터 b 인덱스 이전 구간의 문자를 반환
+
+replace("바꿀 문자", "새 문자") : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 
+                                제일 먼저 찾은 문자를 새 문자로 치환
+              
+toLowerCase() : 문자열에서 영문 대문자를 모두 소문자로 바꿈              
+
+toUpperCase() : 문자열에서 영문 소문자를 모두 대문자로 바꿈
+
+length : 문자열에서 문자의 개수를 반환
+
+split("문자") : 지정한 문자를 기준으로 문자 데이터를 나누어 배열에 저장하여 반환
+
+charCodeAt(index) : 문자열 index에 해당 문자의 아스키 코드값을 반환
+
+fromCharCode(아스키 코드 값) : 아스키 코드값에 해당하는 문자를 반환
+*/
+
+var t = "Hello Thank you good luck yo you";
+document.write(t.charAt(16), "<br>");
+
+document.write(t.indexOf("you"), "<br>");
+
+document.write(t.lastIndexOf("you"), "<br>");
+
+document.write(t.lastIndexOf("you",25),"<br>");
+
+document.write(t.match("luck"), "<br>");
+
+document.write(t.search("you"), "<br>");
+
+document.write(t.substr(21, 4), "<br>");
+document.write(t.substring(6, 12), "<br>");
+
+document.write(t.replace("you", "me"), "<br>");
+
+document.write(t.toLowerCase(),"<br>");
+
+document.write(t.toUpperCase(), "<br>");
+
+document.write(t.length, "<br>");
+
+var s = t.split("");
+
+document.write(s[0], "<br>");
+document.write(s[4], "<br>");
+
+var str = "A";
+var t = str.charCodeAt(0);
+
+document.write(t);
+document.write(String.fromCharCode(65), "<br>");

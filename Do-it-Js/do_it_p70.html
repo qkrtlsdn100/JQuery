@@ -1,0 +1,23 @@
+//로그인
+
+<script>
+var id = "abcd";
+var pw = "1234";
+
+var user_id = prompt("아이디를 입력해주세요", "");
+var user_pw = prompt("비밀번호를 입력해주세요", "");
+
+if(id == user_id){
+    if(pw == user_pw){
+        document.write("로그인 되었습니다");
+    }
+    else{
+        alert("비밀번호를 틀렸습니다");
+        location.reload();
+    }
+}   
+   else{
+        alert("아이디를 틀렸습니다");
+        location.reload();
+    }
+</script>
