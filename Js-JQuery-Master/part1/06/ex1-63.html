@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+</head>
+<body>
+    <script>
+        
+	var Circle = function(c, d){
+		this.color = c;	
+		this.diameter = d;
+	}
+	Circle.prototype.radius = function(n){
+		var r = n/2;
+		return r;
+	}
+	var green_circle = new Circle("green", 200);
+	document.write(green_circle.radius(200));
+    
+    </script>
+</body>
+</html>
