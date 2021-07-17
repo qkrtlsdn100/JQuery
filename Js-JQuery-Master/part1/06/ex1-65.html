@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+</head>
+<body>
+    <script>
+		function closure(n){			
+			return function(){				
+				return ++n;
+			}
+		}
+		var a = closure(10);		
+		document.write(a() + "<br>");
+		document.write(a() + "<br>");
+		var b = closure(20);
+		document.write(b() + "<br>");		
+		document.write(b());
+    </script>
+</body>
+</html>
