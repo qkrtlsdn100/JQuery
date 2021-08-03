@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 강제 실행</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #a{
+            background: red;
+            padding: 20px;
+        }
+        #b{
+            background: green;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            a.onclick = function(){
+                alert("SinWoo2");
+            }
+            b.onclick = function(){
+                alert("SinWoo1");
+                if(window.event){
+                    window.event.cancelBubble = true;
+                }else{
+                    event.stopPropagation();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="a">
+        <p id="b">클릭</p>
+    </div>
+</body>
+</html>
