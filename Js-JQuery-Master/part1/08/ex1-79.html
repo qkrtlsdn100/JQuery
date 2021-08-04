@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    div{
+        height: 30px;
+        background: red;
+    }
+</style>
+<script>
+    window.onload = function(){
+        var div_bg = document.getElementById("bg");
+        var color = ["red", "green", "blue"];
+        var i = 0;
+        setInterval(function(){
+            i++;
+            if(i > 2){
+                i = 0;
+            }
+            div_bg.style.backgroundColor = color[i];
+        },2000);
+    }
+</script>
+<body>
+    <div id="bg"></div>
+</body>
+</html>
