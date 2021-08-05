@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpor t" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout 메서드</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var bg = document.getElementById("bg");
+            var color = ["red", "green", "blue"];
+            var i = 0;
+            var change_bg;
+            this.onresize = function(){
+                clearTimeout(change_bg);
+                change_bg = setTimeout(function(){
+                    i++;
+                    if(i > 2){
+                        i = 0;
+                    }
+                    bg.style.backgroundColor[i];
+                }, 250);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="bg"></div>
+</body>
+</html>
