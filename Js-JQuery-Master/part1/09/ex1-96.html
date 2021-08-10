@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 생성</title>
+    <script>
+        window.onload = function(){
+            var bt = document.getElementById("bt");
+            bt.onclick = createNode;
+            function createNode(){
+                var div = document.createElement("div");
+                var txt = document.createTextNode("div요소가 생성 되었습니다");
+                div.appendChild(txt);
+                document.body.appendChild(div);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="bt">요소 생성</button>
+</body>
+</html>
