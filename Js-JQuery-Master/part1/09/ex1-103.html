@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 객체 속성</title>
+    <script>
+        function check(){
+            var form = document.form;
+            if(!form.agree1.checked){
+                alert("약관에 동의하세요!");
+                form.agree1.focus();
+                return;
+            }
+            if(!form.agree2.checked){
+                alert("개인정보 동의하세요!");
+                form.agree2.focus();
+                return;
+            }
+            location.href = "http://icoxpublish.com";
+        }
+        function allCheck(){
+            with(document.form){
+                if(all.checked){
+                    for(var i = 0; i < length; i++){
+                        if(elements[i].type == "checkbox"){
+                            elements[i].checked = true;
+                        }
+                    }
+                }else{
+                    for(var i = 0; i < length; i++){
+                        if(elements[i].type == "checkbox"){
+                            elements[i].checked == false;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="form">
+        <div>
+            <input type="checkbox" name="all" id="all" onclick="allCheck()">
+            <label for="all">전체동의</label>
+        </div>
+        <div>
+            <textarea cols="30" rows="10">약간동의</textarea>
+        </div>
+        <p>
+            <input type="checkbox" name="agree1" id="agree1">
+            <label for="agree1">약관동의</label>
+        </p>
+        <div>
+            <textarea cols="30" rows="10">개인정보</textarea>
+        </div>
+        <p>
+            <input type="checkbox" name="agree2" id="agree2">
+            <label for="agree2">개인정보동의</label
+        ></p>
+        <p>
+            <input type="button" value="동의" onclick="check()">
+            <input type="reset" value="취소">
+        </p>
+    </form>
+</body>
+</html>
